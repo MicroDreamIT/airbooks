@@ -41,7 +41,7 @@
                                   aria-expanded="false">
                             </span>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <!--<button class="dropdown-item" type="button" @click.prevent="doExport">Export</button>-->
+                                <button class="dropdown-item" type="button" @click.prevent="doExport">Export</button>
                                 <label for="import" class="adminImport dropdown-item"> Import </label>
                                 <form id="importForm" method="post"
                                       class="d-none"
@@ -315,7 +315,11 @@
             doImport(){
                 let formElement=document.getElementById('importForm')
                 formElement.submit();
-            }
+            },
+            doExport(){
+                window.location = '/user/export/part/';
+
+            },
         }
     }
 </script>

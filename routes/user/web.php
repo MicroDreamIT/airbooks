@@ -9,6 +9,9 @@ Route::group(['middleware' => ['auth','roleUser','emailVerified_active']], funct
         return $globalMethod->importDataForParts($modelName);
 
     });
+    Route::get('export/{modelName}', function ($modelName){
+        return (new \App\Http\GlobalMethods())->exportData($modelName);
+    });
 
     Route::post('/payment-history', 'PaymentHistoryController@store');
     Route::get('/{all}', function () {

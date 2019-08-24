@@ -17,6 +17,7 @@ namespace App\Http;
 use App\Aircraft;
 use App\Airport;
 use App\Apu;
+use App\Condition;
 use App\Engine;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\PaymentHistoryController;
@@ -325,12 +326,25 @@ class GlobalMethods
                 $path = $file->getPathName();
                 $data = Excel::load($path, function ($reader) {
                 })->get();
-
-
                 foreach ($data as $item) {
-                    $item->merge(['primary_contact'=>auth()->user()->id]);
-                    $item->merge(['title'=>'asdfsafdsdf']);
+
                     $item = $item->toArray();
+                    $condition=Condition::find($item['condition_id']);
+                    $item=array_merge($item,['title'=>str_replace(' ', '-',
+                            $item['part_number']) .'-' .
+                        str_replace(' ','',$condition->name).'-available-for-Sale']);
+
+                    $title = Part::latest()->first();
+                    if (!$title) {
+                        $uid = 'ABP0'.'1';
+                    }else{
+                        $uid = 'ABP0'. ($title->id + 1);
+                    }
+                    $item=array_merge($item,['primary_contact'=>Auth::id()]);
+                    $item=array_merge($item,['user_id'=>Auth::id()]);
+
+                    $item=array_merge($item,['uid'=>$uid]);
+
                     $modelPathName::forceCreate(array_except($item, ['id']));
 
                 }
