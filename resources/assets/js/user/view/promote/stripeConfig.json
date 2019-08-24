@@ -1,0 +1,14 @@
+{
+  "development": {
+    "stripe_public_key":"pk_test_W2KUwqBuxRunx1a4pF1Unehs",
+    "stripe_secret_key":"sk_test_VOGD6VSEdTXgM6CtbvTK7yg1"
+  },
+  "test": {
+    "stripe_public_key":"pk_test_W2KUwqBuxRunx1a4pF1Unehs",
+    "stripe_secret_key":"sk_test_VOGD6VSEdTXgM6CtbvTK7yg1"
+  },
+  "staging": {
+    "public_key_use_env":"pk_test_W2KUwqBuxRunx1a4pF1Unehs",
+    "secret_key_use_env":"sk_test_VOGD6VSEdTXgM6CtbvTK7yg1"
+  }
+}

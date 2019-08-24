@@ -1,0 +1,682 @@
+
+  @import "global";
+
+  @media(max-width: 425px){
+
+    .paymentSystem{
+      max-width: 78%!important;
+    }
+  }
+  .user-profile{
+    height: 160px;
+    width: 160px;
+    background: url(/siddiqueAssets/images/Airbook-User-Icon.svg);
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-position: center center!important;
+    background-size: cover!important;
+  }
+  .user-profile-button{
+      margin-bottom: 8px;
+      padding: 4px 17px;
+      border: 1px solid #2173B9;
+      border-radius: 5px;
+      color: #aba9a9;
+      text-transform: capitalize;
+  }
+
+      .card-header.error-messege{
+            div{
+                color: #ef2919 !important;
+                font-size: 13px;
+                line-height: 21px;
+                position: relative;
+                padding-left: 27px;
+                margin-bottom: 7px;
+                text-transform: capitalize;
+                &:before{
+                  content: '\D7';
+                  position: absolute;
+                  left: 0;
+                  background: #ff8787;
+                  height: 20px;
+                  width: 20px;
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-pack: center;
+                  -ms-flex-pack: center;
+                  justify-content: center;
+                  -webkit-box-align: center;
+                  -ms-flex-align: center;
+                  align-items: center;
+                  border-radius: 100%;
+                  border: 1px solid #f36d6d;
+                  font-weight: 500;
+                  color: #fff;
+                }
+          }
+       }
+
+
+
+  .paymentSystem{
+    max-width:50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:0 auto;
+    border: 7px solid #d3d3d352;
+    margin-bottom: 100px;
+    .header{
+      background-image: linear-gradient(90deg, #2173b9, #2235b9);
+      width:100%;
+      height:auto;
+      h4{
+        text-align: center;
+        color: #fff;
+        font-weight: 500;
+      }
+    }
+    .body{
+      color: #928e8e;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom:1px solid lightgrey;
+      .left-top{
+        padding:15px;
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        min-width: 200px;
+        div{
+          &:nth-child(1){
+            color: #928e8e;
+            font-size: 12px;
+            padding: 5px 0;
+          }
+          &:nth-child(2){
+           @extend :nth-child(1);
+          }
+          &:nth-child(3){
+            font-size: 18px;
+            font-weight: bold;
+            padding-bottom:5px;
+          }
+        }
+      }
+      .right-top{
+        flex:1;
+        padding:15px;
+        min-width: 200px;
+        padding-right: 30px;
+        img{
+          width: 80%;
+          padding-bottom: 19px;
+        }
+      }
+    }
+    .body{
+      &.middle{
+        background: lightgrey!important;
+        .left-top,.right-top{
+            div{
+              color:#000!important;
+              font-size: 18px!important;
+              font-weight: bold!important;
+              padding-left: 30px;
+              &:last-child{
+                color:#6c6c71 !important;
+              }
+            }
+        }
+        @extend .body;
+      }
+    }
+    .body{
+      &.info{
+        padding: 100px  50px 50px 30px;
+        text-align: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        @extend .body;
+      }
+    }
+
+  }
+
+  .payment{
+        p{
+          background: rgba(249, 249, 249, 0.84);
+          padding: 8px;
+          margin:0 0 10px;
+        }
+  }
+
+
+
+  .card.card-table.custom-title-adjust{
+     thead{
+       tr{
+         th{
+           &:first-child{
+             width: 36%!important;
+           }
+         }
+       }
+     }
+    tbody{
+      tr{
+        td{
+          &:first-child{
+              width: 36%!important;
+          }
+        }
+      }
+    }
+  }
+  .card.card-table.custom-title-adjust-dashboard{
+    thead{
+      tr{
+        th{
+          &:first-child{
+            width: 60%!important;
+          }
+        }
+      }
+    }
+    tbody{
+      tr{
+        td{
+          &:first-child{
+            width: 60%!important;
+          }
+        }
+      }
+    }
+  }
+
+    .widget.widget-tile.custom {
+          padding: 17px 20px;
+          margin-bottom: 25px;
+          display: table;
+          table-layout: fixed;
+          width: 100%;
+          border-radius: 16px;
+    }
+  .fs{
+    font-size: 1.477rem!important;
+    line-height: 25px!important;
+  }
+  .lead-list-area{
+    padding-bottom: 20px;
+    .card-body{
+      .list-group{
+        .list-group-item{
+          &.d-flex{
+              &.flex-column{
+                  span{
+                       &:first-child{
+                           color:#A09D9D;
+                           font-weight: 400;
+                       }
+                        &:last-child{
+                           color:#3C3333;
+                        }
+                  }
+              }
+          }
+        }
+      }
+    }
+    @media (max-width: 768px){
+      width: 100%!important;
+    }
+  }
+  .leads-action{
+    div{
+      display: flex;
+    }
+  }
+
+  .lead-List-Modal{
+    position: fixed;
+    background: #00000094;
+    padding: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+      .uploadMedia{
+           position: relative;
+            .cross-media{
+              position: absolute;
+              top: 7px;
+              right: 21px;
+            }
+      }
+      .plan-bg{
+        background: $plan-bg;
+      }
+  .basicPlan{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      min-height: 100%;
+      background:#fcfdff;
+      border-top: 4px solid #15B374;
+      padding: 24px 0;
+      text-align: center;
+           ul{
+             padding: 0;
+               li{
+                 list-style: none;
+                 color:#333333;
+                 font-weight: 500;
+                 span{
+                   color:#333333;
+                   font-size: 1.6rem !important;
+                   padding: 5px 8px;
+                   vertical-align: middle;
+                   font-weight: normal!important;
+                 }
+               }
+           }
+        .basicPlanSelect{
+          margin-top: 5px;
+          padding: 0px 15px;
+           border: 0;
+          &:hover{
+            background: #BE1E2D;
+            border: 0;
+            box-shadow: none;
+          }
+        }
+        span{
+          &:nth-child(1){
+            color: #333333;
+            font-size: 22px;
+            line-height: 20px;
+            font-weight: 600;
+          }
+
+          &:nth-child(2){
+            font-size:16px;
+            color: rgb(101, 118, 135);
+            padding-top:8px;
+          }
+        }
+        p{
+          border-top: 1px dashed lightgrey;
+          padding: 9px 0;
+          border-bottom: 1px dashed lightgrey;
+          width: 64%;
+          text-align: center;
+          font-weight: 500;
+        }
+
+  }
+      .PremiumPlan{
+        @extend .basicPlan;
+      }
+
+      .airBookPlans{
+             min-height: 389px;
+             display: flex;
+             flex-direction: column;
+             justify-content: flex-start;
+             align-items: center;
+             flex-wrap: wrap;
+             text-align: center;
+             padding: 50px 0;
+             color: #f3f3f3;
+             background-size: cover;
+             background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.27)), url(https://png.pngtree.com/thumb_back/fw800/back_pic/00/12/66/17563f6043a8aa4.jpg);
+            //background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.27)), url(../../../public/images/plan-bg.svg);
+                p{
+                  font-size: 18px;
+                  line-height: 26px;
+                  letter-spacing: 1px;
+                  font-weight: normal;
+                  text-align: center;
+                }
+      }
+
+.planCards{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          position: relative;
+          top: -186px;
+          @media(max-width: 768px){
+            top: -164px;
+          }
+
+      .planBlock{
+                 min-width: 274px;
+                 text-align: center;
+                 margin: 35px 10px;
+                 max-width: 274px;
+            .planHead{
+                  //text-align: center;
+                  color: #2a3239;
+                  font-size: 18px;
+                  text-transform: uppercase;
+                  font-weight: 500;
+                  line-height: 19px;
+                  padding: 20px;
+            }
+            .planMonth{
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+                      padding:20px 0;
+                      color: #f9f9f9;
+                      line-height: 30px;
+                      font-weight: 700;
+                       min-height: 50px;
+                      background: $admin-primary;
+                    &.personal{
+                      background: orange;
+                    }
+                   &.corporate{
+                     background: $admin-secondery;
+                    }
+                span{
+                        &:first-child{
+                          font-size: 30px;
+                        }
+                        &:last-child{
+                          font-size:14px;
+                        }
+                }
+            }
+            .planContentHeading{
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    border-bottom: 1px dashed #DDDDDD;
+                    font-weight: 700;
+                    padding-top: 15px;
+                    color: $planColor;
+                    margin-bottom: 5px;
+
+            }
+              .planContentBlock{
+                    .planContent{
+                      padding: 6px 0;
+                      color: #5d5d5d;
+                      font-size: 12px;
+                      line-height: 18px;
+                      text-transform: capitalize;
+
+                    }
+              }
+        .buyNow{
+          background: aliceblue;
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          align-items: center;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -49px;
+          padding: 10px 0;
+          border-radius: 0 0 3px 3px;
+          min-height: 50px;
+              select{
+                    background: #daeeff;
+                    padding: 6px;
+                    text-transform: capitalize;
+                    color: #303031;
+                    border: 0;
+                    outline: 0;
+                    border-radius: 3px;
+              }
+        }
+      }
+}
+
+
+  .cusmodal{
+    background: rgba(0, 0, 0, 0.72);
+    .modal-content{
+      background: #F4F4F4;
+      .modal-header{
+        padding: 0;
+        .close{
+          margin-top: 0;
+          margin-right: 3px;
+        }
+      }
+    }
+
+  }
+
+  .actions{
+    &.wizard{
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  .steps-container{
+    .steps{
+      li{
+        @media only screen and (max-width: 768px) {
+          &:first-child{
+            padding: 0 7px!important;
+          }
+          font-size: 12.4px !important;
+          padding: 0 6px 0 20px !important;
+        }
+        @media all and (max-width:1024px) and (min-width:769px) {
+            font-size: 1.154rem!important;
+            padding: 0 7px 0 20px!important;
+        }
+      }
+    }
+  }
+
+  .customFormItemAircraft{
+          .deleteBtn{
+            border-radius: 2px;
+            padding-left: 16px;
+            margin-left: 0;
+            background: #696969;
+            color: #fff;
+                  &:hover{
+                    background: #ff2e2c;
+                  }
+          }
+  }
+
+        .aircraft_info{
+              position: relative;
+              width: 141px;
+
+          &:before{
+                        content: '+ Add More Field';
+                        top: 9px;
+                        position: absolute;
+                        z-index: 1;
+                        color: #404040;
+                        pointer-events: none;
+                        width: 100%;
+                        text-align: center;
+                        background: #fff;
+                        left: 1px;
+                  }
+                  select{
+                    width: 156px;
+                    height: 35px!important;
+                    font-size: 14px;
+                  }
+        }
+
+      .form-control.form-control-sm.customShown {
+        height: 27px;
+        border-radius: 4px;
+        width: 34px;
+      }
+
+      .be-datatable-header {
+        padding: 15px 4px;
+        border:0;
+      }
+
+      .progress-widget{
+                position: fixed;
+                background: whitesmoke;
+                bottom: 0;
+                width: 228px;
+            span{
+              color:#696969;
+            }
+      }
+
+      .pointer {
+        pointer-events: none;
+      }
+      .custom_form_add{
+             position: relative;
+             width: 145px;
+                select{
+                  width: 145px;
+                  height: 35px!important;
+                  text-transform: capitalize;
+                }
+                &:before{
+                  content: '+ Add More Field';
+                  top: 9px;
+                  position: absolute;
+                  z-index: 1;
+                  color: #404040;
+                  pointer-events: none;
+                  width: 98%;
+                  text-align: center;
+                  background: #fff;
+                  left: 1px;
+                }
+      }
+
+      .customFormItem{
+             margin-bottom: 20px;
+                label{
+                  height: 3.692rem;
+                }
+                  .v-select.searchable .dropdown-toggle{
+                    height: 3.692rem!important;
+                    transform: translateY(0);
+                    min-width: 210px;
+                    overflow: hidden;
+                  }
+                           .form-control {
+                             height: 3.692rem!important;
+                           }
+                          @media (max-width:425px){
+                                 .form-control{
+                                      width: 80%;
+                                }
+                                .v-select {
+                                      transform: translateY(-0.6px);
+                                 }
+                          }
+
+
+                  label{
+                    text-transform: capitalize;
+                    background: #e7e7e7;
+                    color: #535558;
+                    border-radius: 2px 0 0 2px;
+                  }
+                  .deleteBtn{
+                        height: 3.692rem;
+                        border-radius: 2px;
+                        padding-left: 16px;
+                        margin-left:0;
+                        background: #696969;
+                        color: #fff;
+                            &:hover{
+                              background: #ff2e2c;
+                            }
+                  }
+      }
+
+
+  .v-select{
+        &.is-danger{
+          border: 1px solid red;
+              .dropdown-toggle{
+                   border: none;
+              }
+        }
+          .open-indicator{
+            bottom: 10px !important;
+          }
+
+          .selected-tag{
+            padding: 1px .25em !important;
+            font-size: 1.1538rem!important;
+            height: 35px!important;
+            margin: 8px 1px 0 3px!important;
+          }
+          .clear{
+            bottom: 12px!important;
+          }
+          &.searchable{
+                  .dropdown-toggle{
+                    cursor: text !important;
+                    height: 47px !important;
+                    border-radius: 2px !important;
+                  }
+          }
+  }
+  .not-clearable{
+    .clear{
+      display: none;
+    }
+  }
+.capitalize{
+  text-transform: capitalize;
+}
+.own-underline:hover{
+  text-decoration: underline;
+  color:#2173b9;
+}
+
+.own-width-table{
+  min-width: 30%;
+}
+
+  .PT_express_checkout a:first-child{
+    display: none!important;
+  }
+  //Class Overwright
+.be-user-nav > li.dropdown > a img{
+  height:32px!important;
+  width:32px!important;
+}
+
+  .mediaActive{
+    background: #616de4!important;
+    color:#fff!important;
+  }
+
+  label.vue-select-image__lbl{
+    display: none !important;
+  }

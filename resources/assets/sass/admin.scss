@@ -1,0 +1,284 @@
+
+@import "~vue-wysiwyg/dist/vueWysiwyg.css";
+
+ @import "global";
+.table-recent-airbookers{
+  tbody{
+    tr{
+      td{
+        padding:9px 0;
+      }
+    }
+  }
+}
+.user-profile{
+  height: 160px;
+  width: 160px;
+  background: url(/siddiqueAssets/images/Airbook-User-Icon.svg);
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-position: center center!important;
+  background-size: cover!important;
+}
+.user-profile-button{
+  margin-bottom: 8px;
+  padding: 4px 17px;
+  border: 1px solid #2173B9;
+  border-radius: 5px;
+  color: #aba9a9;
+  text-transform: capitalize;
+}
+
+    .lead-List-Modal{
+      position: fixed;
+      background: #00000094;
+      padding: 50px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+.importFile{
+  display: none;
+}
+
+       .assetsApprovement{
+         background: #ececec;
+         padding: 3px 0;
+         font-size: 12px;
+         border: 1px solid #dcdada;
+         border-radius: 3px;
+         outline:0;
+         width: 50%;
+         color: #5a5a5a;
+               option{
+                 font-size: 13px;
+                 border: 0;
+               }
+        }
+
+      .aircraftAssetsSection{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+            @media only screen and (max-width: 768px) {
+              flex-direction: column;
+              justify-content: space-between;
+              flex-wrap: wrap;
+            }
+        .selectedArea{
+          display: flex;
+          flex-direction: row;
+          @media only screen and (max-width: 768px) {
+              flex-wrap: wrap;
+          }
+        }
+      }
+      .assetSelection{
+        min-height: 36px;
+        border-radius: 4px;
+        background: transparent;
+        border: 1px solid #d5d8de;
+        outline: 0;
+        font-size: 15px;
+        padding: 4px 12px;
+        margin: 9px 6px;
+        color: #878787;
+
+      }
+
+      .progress-widget{
+        position: fixed;
+        background: whitesmoke;
+        bottom: 0;
+        width: 228px;
+        span{
+          color:#696969;
+        }
+      }
+
+
+      #bottomAdjust{
+            @media only screen and (max-width: 425px) {
+             flex-direction: column;
+            }
+      }
+      #adjustPagination{
+            @media only screen and (max-width: 425px) {
+              display: flex;
+              justify-content: center;
+            }
+      }
+      .form-control.form-control-sm.customShown{
+        height: 27px;
+        border-radius: 4px;
+        width: 34px;
+      }
+
+
+
+
+
+
+
+      .dataTables_wrapper div.dataTables_filter input {
+        border-radius: 4px;
+      }
+
+        .v-select{
+
+        &.is-danger{
+          border: 1px solid red;
+            .dropdown-toggle{
+              border: none;
+            }
+        }
+
+        .open-indicator{
+          bottom: 10px !important;
+        }
+
+          .selected-tag{
+            padding: 5px .25em !important;
+            font-size: 1.1538rem!important;
+            height: 35px!important;
+          }
+          .clear{
+            bottom: 12px!important;
+          }
+        &.searchable{
+          .dropdown-toggle{
+            cursor: text !important;
+            height: 47px !important;
+            border-radius: 2px !important;
+          }
+        }
+      }
+
+
+      .pointer{
+            pointer-events: none;
+      }
+      .rotateIcon{
+            font-size: 25px;
+            color: #c5c5c5;
+      }
+      .rotating{
+            transform: rotate(180deg);
+            margin-bottom: -4px;
+      }
+
+      .dropHeader{
+              min-height: 52px;
+              position: absolute;
+              left: 0;
+              right: 0;
+              background: #fff;
+              top: 0;
+              padding: 15px 11px;
+              font-size: 1.1rem;
+                  @media only screen and (min-width: 768px) {
+                    display: none;
+                  }
+      }
+
+
+
+        .card-border-color-primary {
+              border-top-color: #ab1b25;
+        }
+
+      .custom_info{
+          .card-header{
+            font-weight: 400;
+            padding: 15px 22px;
+          }
+            .info_section{
+                  padding: $p-default;
+                  background: #fff;
+                  min-height: 150px;
+          }
+          .infoList{
+            margin: 0;
+            padding: 0;
+             li{
+                  list-style: none;
+                      .list_title{
+                        font-weight: bold;
+                        color: #4f4f4fdb;
+                        font-size: 15px;
+                        line-height: 2.1;
+                      }
+                      .list_desc{
+                        font-size: 15px;
+                        color: #4285f4;
+                      }
+             }
+          }
+              .company_profile{
+                   height: 166px;
+                   background: white;
+                   display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  padding:$p-default;
+              }
+            .desc_info{
+                  background: white;
+                  padding: $p-default;
+            }
+      }
+
+          .be-datatable-header {
+              padding: 15px 4px;
+              border:0;
+          }
+
+      .dz-max-files-reached {
+           cursor: default!important;
+      }
+
+.alert{
+  z-index: 1050 !important;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+.selected-tag{
+  text-transform: capitalize;
+}
+
+.own-uppercase{
+  text-transform: uppercase;
+}
+.own-capitalize{
+  text-transform: capitalize;
+}
+
+.widget.widget-tile{
+  border-radius:16px!important;
+}
+
+
+.be-user-nav > li.dropdown > a img{
+  width:32px!important;
+  height:32px!important;
+}
+
+.be-left-sidebar .progress-widget{
+  padding:10px!important;
+}
+
+.mediaActive{
+  background: #616de4!important;
+  color:#fff!important;
+}
+
+label.vue-select-image__lbl{
+  display: none !important;
+}
