@@ -277,6 +277,7 @@ class GlobalMethods
                 $data = Excel::load($path, function ($reader) {
                 })->get();
                 $joinModelArray = ['manufacturer', 'news', 'event', 'company'];
+                dd($data);
                 foreach ($data as $item) {
                     $item = $item->toArray();
                     if (in_array($modelName, $joinModelArray)) {
@@ -315,6 +316,30 @@ class GlobalMethods
         })->download('csv');
     }
 
+
+    public function importDataForParts($modelName){
+        $modelPathName = '\\App\\' . ucfirst($modelName);
+        try {
+            if (request()->hasFile('file')) {
+                $file = request()->file('file');
+                $path = $file->getPathName();
+                $data = Excel::load($path, function ($reader) {
+                })->get();
+
+
+                foreach ($data as $item) {
+                    $item->merge(['primary_contact'=>auth()->user()->id]);
+                    $item->merge(['title'=>'asdfsafdsdf']);
+                    $item = $item->toArray();
+                    $modelPathName::forceCreate(array_except($item, ['id']));
+
+                }
+                return back();
+            }
+        } catch (\Exception $e) {
+            return back()->with(['type' => 'danger', 'message' => $e->getMessage()]);
+        }
+    }
 
     /**
      * @param $modelName

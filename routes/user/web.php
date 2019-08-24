@@ -4,6 +4,12 @@
 
 Route::group(['middleware' => ['auth','roleUser','emailVerified_active']], function () {
 
+    Route::post('import/data/{modelName}', function ($modelName){
+        $globalMethod=new \App\Http\GlobalMethods();
+        return $globalMethod->importDataForParts($modelName);
+
+    });
+
     Route::post('/payment-history', 'PaymentHistoryController@store');
     Route::get('/{all}', function () {
 //    auth()->loginUsingId(1, true);

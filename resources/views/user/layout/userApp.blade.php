@@ -28,6 +28,20 @@
 </head>
 <body>
 
+@if(session()->has('type'))
+    <div class="alert alert-{{ session()->get('type')?session()->get('type'):'info'}} alert-dismissible"
+         role="alert" style="z-index: 9999; position: fixed; width: 100%;">
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close" @click="closeAlert()">
+            <span class="mdi mdi-close" aria-hidden="true"></span>
+        </button>
+        <div class="icon"><span class="mdi mdi-check"></span></div>
+        <div class="message">
+            <strong>Error! </strong>
+            {{ session()->get('message')}}
+        </div>
+    </div>
+
+@endif
 <div id="app" :class="'be-wrapper be-collapsible-sidebar be-collapsible-sidebar-hide-logo ' + navTogglar" v-cloak>
 
 
