@@ -253,6 +253,9 @@ class GlobalMethods
             if ($typeName) {
                 $query->whereType($typeName);
             }
+            if ($modelName=='part') {
+                $query->whereUserId(auth()->user()->id);
+            }
             $query = $query->get();
             return Excel::create($modelName . '_data', function ($excel) use ($query) {
                 $excel->sheet('my sheet', function ($sheet) use ($query) {
