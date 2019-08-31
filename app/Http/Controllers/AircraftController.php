@@ -112,7 +112,7 @@ class AircraftController extends Controller
         if(Auth::user()->hasRoleType()=='admin' || $aircraft->user_id==auth()->id()) {
             return response()->json([
                 'companies' => Company::orderBy('name')->select('id', 'name')->get(),
-                'airports' => Airport::orderBy('name')->select('id', 'name')->get(),
+//                'airports' => Airport::orderBy('name')->select('id', 'name')->get(),
                 'countries' => Country::orderBy('name')->select('id', 'name')->get(),
                 'aircraft' => Aircraft::with([
                     'category:id,name',
