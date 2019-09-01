@@ -87,13 +87,13 @@ class AircraftCreateRequest extends FormRequest
 
         $aircraft->primaryContact()->associate($this->input('primary_contact')['id']);
 
-        $aircraft->YOM = Carbon::parse($this->input('YOM'));
+        $aircraft->YOM = Carbon::createFromFormat('d/m/Y', '01/01/'.$this->input('YOM'));
         $aircraft->availability = Carbon::parse($this->input('availability'));
 
         if($this->input('aircraftModel')){
-            $aircraft->title = str_replace(' ', '-',$this->input('aircraftManufacturer')['name']) .'-'.str_replace(' ', '-',$this->input('aircraftType')['name']) .'-'. str_replace(' ','-',$this->input('aircraftModel')['name']) .'-available-for-'. $this->input('offer_for').'-YOM-'.Carbon::parse($this->input('YOM'))->year;
+            $aircraft->title = str_replace(' ', '-',$this->input('aircraftManufacturer')['name']) .'-'.str_replace(' ', '-',$this->input('aircraftType')['name']) .'-'. str_replace(' ','-',$this->input('aircraftModel')['name']) .'-available-for-'. $this->input('offer_for').'-YOM-'.$this->input('YOM');
         }else{
-            $aircraft->title = str_replace(' ', '-',$this->input('aircraftManufacturer')['name']) .'-'.str_replace(' ', '-',$this->input('aircraftType')['name']) .'-available-for-'. $this->input('offer_for').'-YOM-'.Carbon::parse($this->input('YOM'))->year;
+            $aircraft->title = str_replace(' ', '-',$this->input('aircraftManufacturer')['name']) .'-'.str_replace(' ', '-',$this->input('aircraftType')['name']) .'-available-for-'. $this->input('offer_for').'-YOM-'.$this->input('YOM');
         }
 
         $aircraft->uid = $uid;
