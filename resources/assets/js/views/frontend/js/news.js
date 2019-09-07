@@ -51,7 +51,7 @@ export default {
         getData(current_page){
             this.$root.$data.isLoading = true
 
-            axios.get('/news?page='+current_page+'&resultPerPage=20&sortOrder=desc&sortName=id&is_active=1&paging=true').then(res=>{
+            axios.get('/ajax/news?page='+current_page+'&resultPerPage=20&sortOrder=desc&sortName=id&is_active=1&paging=true').then(res=>{
                 this.paginationData=res.data
                 this.news=res.data.data
                 this.$root.$data.isLoading = false

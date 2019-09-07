@@ -145,8 +145,10 @@ Route::group(['middleware' => ['webJsonFront','frontAsset']], function () {
     Route::get('company/title', 'TitleController@index');
     Route::get('contacts', 'ContactController@index');
     Route::get('company', 'CompanyController@index');
-    Route::get('news', 'NewsController@index');
-    Route::get('event', 'EventController@index');
+//    Route::get('news', 'NewsController@index');
+    Route::get('/ajax/news', 'NewsController@index');
+//    Route::get('event', 'EventController@index');
+    Route::get('/ajax/event', 'EventController@index');
     Route::get('airport/airfield', 'AirfieldController@index');
     Route::get('airport', 'AirportController@index');
     Route::get('canned-email', 'CannedemailController@index');

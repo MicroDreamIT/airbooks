@@ -63,7 +63,7 @@
         data() {
             return {
                 status:null,
-                url:'/news',
+                url:'/ajax/news',
                 columns: [
                     {name: 'Title'},
                     {name: 'Company', nested:'companies.name'},

@@ -154,12 +154,12 @@ export default {
             })
         },
         getEvents(){
-            axios.get('/event?resultPerPage=4&paging=true&date_over=31-12-2080&sortOrder=desc&sortName=id&is_active=1').then(res=>{
+            axios.get('/ajax/event?resultPerPage=4&paging=true&date_over=31-12-2080&sortOrder=desc&sortName=id&is_active=1').then(res=>{
                 this.events=res.data.data
             })
         },
         getNews(){
-            axios.get('/news?resultPerPage=4&paging=true&sortOrder=desc&sortName=id&is_active=1').then(res=>{
+            axios.get('/ajax/news?resultPerPage=4&paging=true&sortOrder=desc&sortName=id&is_active=1').then(res=>{
                 this.news=res.data.data
             })
         },

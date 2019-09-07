@@ -66,7 +66,7 @@ export default {
         getData(current_page){
             this.$root.$data.isLoading = true
 
-            axios.get('/event?page='+current_page+'&resultPerPage=20&sortOrder=ASC&sortName=end_date&date_over=31-12-2080&is_active=1&paging=true').then(res=>{
+            axios.get('/ajax/event?page='+current_page+'&resultPerPage=20&sortOrder=ASC&sortName=end_date&date_over=31-12-2080&is_active=1&paging=true').then(res=>{
                 this.paginationData=res.data
                 this.events=res.data.data
                 this.$root.$data.isLoading = false

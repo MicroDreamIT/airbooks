@@ -87,7 +87,7 @@ export default {
             })
         },
         getNews(){
-            axios.get('/news?resultPerPage=2&sortOrder=desc&sortName=id&is_active=1&paging=true').then(res=>{
+            axios.get('/ajax/news?resultPerPage=2&sortOrder=desc&sortName=id&is_active=1&paging=true').then(res=>{
                 this.news=res.data.data
             })
         },

@@ -482,6 +482,14 @@ class GlobalMethods
             'type' => 'success'
         ]);
     }
+
+
+    public static function seo_description($title)
+    {
+        $searches = array("\r", "\n", "\r\n");
+        return substr(str_replace($searches, " ", $title), 0, 165);
+    }
+
 }
 
 //$data=Excel::load($path)->noHeading()->all()->toArray();
