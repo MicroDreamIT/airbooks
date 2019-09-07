@@ -2,18 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title id="title">Airbook</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="yandex-verification" content="e1e300b5ee6e4d3c" />
+    @include('frontendPartial.metaHead')
     <link href="/frontend/css/normalize.css" rel="stylesheet" type="text/css">
     <link href="/frontend/css/webflow.css" rel="stylesheet" type="text/css">
     <link href="/frontend/css/airbook.webflow.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="/siddiqueAssets/images/32x32-web-icon-new.png" rel="icon">
     <link rel="stylesheet" type="text/css" href="{{asset('admin2/lib/material-design-icons/css/material-design-iconic-font.min.css')}}">
-    <meta name="fragment" content="!">
     <link rel="stylesheet" type="text/css" href="{{mix('css/app.css')}}">
     <script type="text/javascript">
         WebFont.load({

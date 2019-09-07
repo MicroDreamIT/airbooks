@@ -12,7 +12,8 @@ class Seo extends Model
         'method',
         'title',
         'description',
-        'is_active'
+        'is_active',
+        'url'
     ];
 
     public function medias()

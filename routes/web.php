@@ -170,9 +170,7 @@ Route::group(['middleware' => ['webJsonFront','frontAsset']], function () {
 });
 
 
-Route::get('/{all}', function () {
-    return view('welcome');
-})->where(['all'=>'.*']);
+Route::get('/{all}','SingleAppController@index')->where(['all'=>'.*']);
 
 
 Route::get('departments', function(){

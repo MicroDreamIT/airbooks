@@ -18,6 +18,7 @@ class CreateSeosTable extends Migration
             $table->integer('model_id')->index();
             $table->string('model_type')->index();
             $table->string('method')->nullable();
+            $table->string('url')->nullable();
             $table->string('title');
             $table->text('description');
             $table->boolean('is_active')->default(true);
