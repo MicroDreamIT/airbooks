@@ -3,6 +3,7 @@
 <title id="title">{{isset($metaHead)? $metaHead->title : \App\Seo::where('method', 'Home')->first()->title }}</title>
 <meta name="description" content="{{isset($metaHead) ? \App\Http\GlobalMethods::seo_description($metaHead->description, 0,165) : \App\Http\GlobalMethods::seo_description(substr(\App\Seo::where('method', 'Home')->first()->description, 0,165)) }}">
 <meta name="image" content="{{isset($metaHead) && key_exists('image',$metaHead) && $metaHead->image ? $metaHead->image : 'https://airbook.aero/storage/Seo/abhomeart.jpg'}}">
+<meta name="og:image" content="{{isset($metaHead) && key_exists('image',$metaHead) && $metaHead->image ? $metaHead->image : 'https://airbook.aero/storage/Seo/abhomeart.jpg'}}">
 
 <meta content="width=device-width, initial-scale=1" name="viewport">
 
